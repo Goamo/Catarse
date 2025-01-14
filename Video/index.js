@@ -12,12 +12,12 @@ const saveFormat = document.getElementById("saveFormat");
 let isColorMode = true;
 const layers = [];
 
-// Изменение скорости воспроизведения
+// Change playback speed
 function changeSpeed(factor) {
   video.playbackRate = factor;
 }
 
-// Обработчик загрузки видео
+// Video upload handler
 videoUpload.addEventListener("change", function (event) {
   const file = event.target.files[0];
   const url = URL.createObjectURL(file);
@@ -62,7 +62,7 @@ function addLayer() {
   });
 
   const removeButton = document.createElement("button");
-  removeButton.textContent = "Удалить";
+  removeButton.textContent = "Remove";
   removeButton.addEventListener("click", function () {
     layers.splice(layers.indexOf(layer), 1);
     layerElement.remove();
@@ -76,7 +76,7 @@ function addLayer() {
 
 function applyStylizedEffect() {
   if (!video.src) {
-    alert("Пожалуйста, загрузите видео!");
+    alert("Please upload a video!");
     return;
   }
 
@@ -91,10 +91,10 @@ function applyStylizedEffect() {
 function drawEffect() {
   if (video.paused || video.ended) return;
 
-  // Нарисовать обработанное видео на канвасе
+  // Draw processed video on the canvas
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-  // Получаем данные изображения с канваса
+  // Get image data from the canvas
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const data = imageData.data;
 
@@ -135,7 +135,7 @@ function drawEffect() {
     modifiedG = Math.min(255, Math.max(0, modifiedG + noise));
     modifiedB = Math.min(255, Math.max(0, modifiedB + noise));
 
-    // Применение мультяшного эффекта
+    // Apply cartoon effect
     if (cartoonIntensity > 0) {
       const avg = (modifiedR + modifiedG + modifiedB) / 3;
       modifiedR = avg + ((modifiedR - avg) * cartoonIntensity) / 100;
@@ -178,10 +178,10 @@ function drawEffect() {
     }
   }
 
-  // Отображаем измененные данные на канвасе
+  // Display modified data on the canvas
   ctx.putImageData(imageData, 0, 0);
 
-  // Продолжаем рисовать, используя анимацию
+  // Continue drawing using animation
   requestAnimationFrame(drawEffect);
 }
 
