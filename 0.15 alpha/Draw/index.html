@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рисование в 2D и 3D</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="toolbar">
+      <button id="brushButton" onclick="toggleBrushDropdown()">кисть</button>
+      <div id="brushDropdown" class="settings-menu">
+        <span class="close-btn" onclick="toggleBrushDropdown()">❌</span>
+        <div onclick="setBrushType('round')">Круглая</div>
+        <div onclick="setBrushType('square')">Квадратная</div>
+        <div onclick="setBrushType('spray')">Спрей</div>
+        <div onclick="setBrushType('watercolor')">Акварель</div>
+        <div onclick="setBrushType('oil')">Масляная краска</div>
+        <div onclick="setBrushType('eraser')">Ластик</div>
+      </div>
+      <button onclick="toggleBrushSettings()">Настройки</button>
+      <div id="brushSettingsDropdown" class="settings-menu">
+        <span class="close-btn" onclick="toggleBrushSettings()">❌</span>
+        <div>
+          <label for="brushThicknessSetting">Толщина кисти:</label>
+          <input
+            type="range"
+            id="brushThicknessSetting"
+            min="1"
+            max="20"
+            value="10"
+            onchange="updateBrushThickness(this.value)"
+          />
+        </div>
+        <div>
+          <label for="colorPickerSetting">Цвет:</label>
+          <input
+            type="color"
+            id="colorPickerSetting"
+            value="#000000"
+            onchange="setColor(this.value)"
+          />
+        </div>
+        <div>
+          <label for="opacitySetting">Непрозрачность:</label>
+          <input
+            type="range"
+            id="opacitySetting"
+            min="0"
+            max="100"
+            value="100"
+            onchange="updateOpacity(this.value)"
+          />
+        </div>
+        <div>
+          <label for="brightnessSetting">Яркость:</label>
+          <input
+            type="range"
+            id="brightnessSetting"
+            min="-100"
+            max="100"
+            value="0"
+            onchange="updateBrightness(this.value)"
+          />
+        </div>
+        <div>
+          <label for="contrastSetting">Контраст:</label>
+          <input
+            type="range"
+            id="contrastSetting"
+            min="-100"
+            max="100"
+            value="0"
+            onchange="updateContrast(this.value)"
+          />
+        </div>
+      </div>
+      <button id="toggleModeButton" onclick="toggleDrawingMode()">
+        Переключить на 3D
+      </button>
+    </div>
 
+    <div id="layerPanel">
+      <button onclick="addLayer()">Добавить слой</button>
+      <button onclick="removeLayer()">Удалить слой</button>
+      <button id="undoButton" onclick="undo()">↩️</button>
+      <button id="redoButton" onclick="redo()">↪️</button>
+      <div class="layer-list" id="layerList"></div>
+    </div>
+
+    <canvas id="canvas2D"></canvas>
+    <canvas id="canvas3D" style="display: none"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
