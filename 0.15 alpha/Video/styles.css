@@ -1,106 +1,42 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4e4c8;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1000px;
-  width: 100%;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.video-container {
-  position: relative;
-  margin: 20px 0;
-}
-
-video,
-canvas {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.controls {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin: 20px 0;
-}
-
-button {
-  padding: 10px 15px;
-  background: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #3a7bc8;
-}
-
-.slider-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.slider-group {
-  padding: 10px;
-  background: #f5f5f5;
-  border-radius: 4px;
-}
-
-input[type="range"] {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.layer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  background: #f5f5f5;
-  margin: 5px 0;
-  border-radius: 4px;
-}
-
-.progress-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.progress-content {
-  background: white;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-}
-
-progress {
-  width: 100%;
-  margin-top: 10px;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4e4c8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+      .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border: 2px solid #fff;
+            margin-top: 10px;
+        }
+      .controls {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+      .slider-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+      .slider-label {
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+        }
