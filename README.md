@@ -16,7 +16,7 @@ This open-source graphics editor allows you to create 2D illustrations with 3D s
 - Saving the outcomes of discussions, webinars, or workshops as raster images (e.g., PNG)
 
 
-
+This version is designed for use on desktop and laptop computers and does not currently support touchscreens. However, the product’s architecture allows for future development in that direction — so stay tuned for updates.
 The current stable version is 1.0, featuring the core functionality:
 
 1) Interaction with 3D primitives: add, move, scale, rotate, and delete
