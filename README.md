@@ -35,3 +35,51 @@ https://goamo.github.io/catarse-official/
 
 Offline version (source code):
 https://github.com/Goamo/Catarse
+
+
+# Installation Guide
+
+1. **Download** the version of the program you need.
+
+2. **Unzip** the archive to your Desktop.
+
+3. In parallel, do the following:
+
+   3.1) **Install Visual Studio Code**
+   3.2) In VS Code, find the **Extensions** tab on the left panel
+   3.3) Search for **Live Server** and install it
+
+4. **Open**:
+
+#### 4.1 Windows PowerShell — depending on your browser, use one of the following commands:
+
+**Google Chrome**:
+
+```powershell
+& "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:\chrome-dev" "file:///C:/Users/Your%20Username/Desktop/your_version/Draw/index.html"
+```
+
+**Microsoft Edge**:
+
+```powershell
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --disable-web-security --user-data-dir="C:\edge-dev" "file:///C:/Users/Your%20Username/Desktop/your_version/Draw/index.html"
+```
+
+#### 4.2 macOS Terminal (alternative):
+
+**Google Chrome**:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --disable-web-security --user-data-dir="/tmp/chrome-dev" "file:///Users/Your%20Username/Desktop/your_version/Draw/index.html"
+```
+
+**Microsoft Edge**:
+
+```bash
+"/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" --disable-web-security --user-data-dir="/tmp/edge-dev" "file:///Users/Your%20Username/Desktop/your_version/Draw/index.html"
+```
+
+5. **Done!**
+   You can now start working with Catarse locally.
+
+
