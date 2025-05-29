@@ -1,2 +1,5 @@
 # Catarse
-Catarse is an open-source editor with two parts: a graphics editor for creating 2D graphics with 3D support and tools for video filtering and editing for animation. Built with Three.js, it's perfect for working with both graphics and video content.
+This program is designed for quickly capturing your plans, ideas, and concept art. It’s ideal for designers who need to communicate effectively with clients.
+
+Catarse is an open-source graphics editor for creating 2D artwork with 3D support. Built with Three.js, it’s perfectly suited for working with visual content.
+
