@@ -15,3 +15,13 @@ This open-source graphics editor allows you to create 2D illustrations with 3D s
 
 - Saving the outcomes of discussions, webinars, or workshops as raster images (e.g., PNG)
 
+
+The current stable version is 1.0, featuring the core functionality:
+
+1) Interaction with 3D primitives: add, move, scale, rotate, and delete
+
+2) Drawing with basic brushes across different planes, depending on the selected mode
+
+3) Layer management with the ability to hide or delete layers
+
+4) Automatic counting and logging of objects placed on the canvas
