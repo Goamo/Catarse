@@ -28,3 +28,10 @@ The current stable version is 1.0, featuring the core functionality:
 4) Automatic counting and logging of objects placed on the canvas
 
 
+As Catarse is still in its early stages, some bugs or unexpected behavior may occur. If you encounter any issues, don’t worry — simply report the problem in a clear and accessible way, and we’ll do our best to address it in future updates.
+
+Online version:
+https://goamo.github.io/catarse-official/
+
+Offline version (source code):
+https://github.com/Goamo/Catarse
